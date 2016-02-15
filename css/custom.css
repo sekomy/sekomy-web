@@ -1,0 +1,157 @@
+body{
+    background: url("../images/bg.png") repeat;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4{
+    font-weight: 400;
+    margin: 30px 0 15px;
+}
+
+h1, .h1 {
+    font-size: 52px;
+}
+h2, .h2{
+    font-size: 36px;
+}
+h3, .h3{
+    font-size: 28px;
+    margin: 20px 0 10px;
+}
+h4, .h4{
+    font-size: 22px;
+}
+h5, .h5 {
+    font-size: 16px;
+}
+h6, .h6{
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+p{
+    font-size: 16px;
+    line-height: 1.6180em;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+    color: #999999;
+    font-weight: 300;
+    line-height: 1;
+}
+h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
+    font-size: 60%;
+}
+
+
+.navbar .btn{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.modal-backdrop.in {
+    opacity: 0.25;
+}
+
+
+.main{
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    width: auto;
+}
+.cover{
+    position: fixed;
+    opacity: 1;
+    background-color: rgba(0,0,0,.6);
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.cover.black{
+    background-color: rgba(193, 193, 193, 0.3);
+}
+
+.blur{
+  opacity:0;
+}
+
+.logo-container{
+    left: 50px;
+    position: absolute;
+    top: 20px;
+     z-index: 3;
+}
+.logo-container .logo{
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    width: 60px; 
+    float: left;
+}
+.logo-container .brand{
+    font-size: 18px;
+    color: #888888;
+    line-height: 20px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 60px
+}
+.main .logo{
+    color: #888888;
+    font-size: 56px;
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    z-index: 3;
+}
+
+.main .logo img {
+    width: 40%;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    .main .logo img{ width: 80%;}
+}
+
+.main .content{
+    position: relative;
+    z-index: 4;
+}
+.main .motto{
+    min-height: 140px;
+}
+.main .motto, .main .subscribe .info-text{
+    font-size: 36px;
+    color: #888888;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+.footer{
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    width: 100%;
+    color: #AAAAAA;
+    z-index: 4;
+    text-align: center;
+    margin-top: 50px;
+}
+.footer a{
+    color: #FFFFFF;
+}
+.footer .heart{
+    color: #FF3B30;
+}
