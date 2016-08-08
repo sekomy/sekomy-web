@@ -7,20 +7,18 @@
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sekom Yazılım | Soitron</title>
-    <meta name="description" content="Spirit8 is a Digital agency one page template built based on bootstrap framework. This template is design by Robert Berki and coded by Jenn Pereira. It is simple, mobile responsive, perfect for portfolio and agency websites. Get this for free exclusively at ThemeForces.com">
-    <meta name="keywords" content="bootstrap theme, portfolio template, digital agency, onepage, mobile responsive, spirit8, free website, free theme, themeforces themes, themeforces wordpress themes, themeforces bootstrap theme">
-    <meta name="author" content="ThemeForces.com">
-    <link rel="icon" href="../images/favico.ico" type="image/x-icon">
+    <meta name="description" content="Sekom Yazılım | Soitron Group">
+    <meta name="keywords" content="">
+    <meta name="author" content="Sekom Yazılım">
 
     
     <!-- Favicons
     ================================================== -->
-    <!-- 
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-    -->
+    <link rel="shortcut icon" href="../images/favico.ico"  type="image/x-icon">
+    <link rel="apple-touch-icon" href="../images/favico.ico" >
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/favico.ico" >
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/favico.ico" >
+
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
@@ -54,28 +52,35 @@
       <div class="container scrollTopContainer">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand logo" href="index.html"><img src="img/logo.png"></a>
+          <a class="navbar-brand logo" href="#tf-home"><img src="img/logo.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse marT15" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse marT15 menu" id="menu">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#tf-home" class="page-scroll">Menu</a></li>
-            <li><a href="#tf-about" class="page-scroll">Menu-2</a></li>
-            <li><a href="#tf-team" class="page-scroll">Menu-3</a></li>
-            <li><a href="#tf-services" class="page-scroll">Menu-4</a></li>
-            <li><a href="#tf-works" class="page-scroll">Menu-5</a></li>
-            <li><a href="#tf-testimonials" class="page-scroll">Menu-6</a></li>
-            <li><a href="#tf-contact" class="page-scroll">Menu-7</a></li>
+            <li><a href="#about" class="page-scroll">About</a></li>
+            <li class="DropDownOpen">
+                <a class="page-scroll dropDownIcon marR10" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Products</a>
+                <ul class="dropdown-menu dropBoxMenu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Bussines Intellegence Platform</a></li>
+                    <li><a href="#">DPI Console</a></li>
+                    <li><a href="#">NMS Suite</a></li>
+                    <li><a href="#">IP Adress Management</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact" class="page-scroll">Contact</a></li>
+            <li><a href="#tf-services" class="page-scroll">Jop Offer</a></li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
     </nav>
 
     <!-- Home Page
@@ -83,19 +88,18 @@
     <div id="tf-home" class="text-center">
         <div class="overlay">
             <div class="content">
-                <h1>Merhaba <strong><span class="color">Sekom Yazılıma</span></strong> Hoşgeldiniz</h1>
-                <p class="lead">Lorem ipsum dolat sit amed</strong></p>
-                <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
+                <h1>MERHABA <strong><span class="color">SEKOM YAZILIMA</span></strong> HOŞGELDİNİZ</h1>
+                <a href="#about" class="fa fa-angle-down page-scroll"></a>
             </div>
         </div>
     </div>
 
     <!-- About Us Page
     ==========================================-->
-    <div id="tf-about">
+    <div id="about">
         <div class="container">
             <div class="section-title center">
-                <h2>Take a look at <strong>our services</strong></h2>
+                <h2>About <strong>Us</strong></h2>
                 <div class="line">
                     <hr>
                 </div>
@@ -127,112 +131,6 @@
                     <h4><strong>Marketing</strong></h4>
                     <p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Team Page
-    ==========================================-->
-    <div id="tf-team" class="text-center">
-        <div class="overlay">
-            <div class="container">
-                <div class="section-title center">
-                    <h2>Meet <strong>our team</strong></h2>
-                    <div class="line">
-                        <hr>
-                    </div>
-                </div>
-
-                <div id="team" class="owl-carousel owl-theme row">
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="img/team/01.jpg" alt="..." class="img-circle team-img">
-                            <div class="caption">
-                                <h3>Jenn Gwapa</h3>
-                                <p>CEO / Founder</p>
-                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="img/team/02.jpg" alt="..." class="img-circle team-img">
-                            <div class="caption">
-                                <h3>Jenn Gwapa</h3>
-                                <p>CEO / Founder</p>
-                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="img/team/03.jpg" alt="..." class="img-circle team-img">
-                            <div class="caption">
-                                <h3>Jenn Gwapa</h3>
-                                <p>CEO / Founder</p>
-                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="img/team/04.jpg" alt="..." class="img-circle team-img">
-                            <div class="caption">
-                                <h3>Jenn Gwapa</h3>
-                                <p>CEO / Founder</p>
-                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="img/team/04.jpg" alt="..." class="img-circle team-img">
-                            <div class="caption">
-                                <h3>Jenn Gwapa</h3>
-                                <p>CEO / Founder</p>
-                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="img/team/01.jpg" alt="..." class="img-circle team-img">
-                            <div class="caption">
-                                <h3>Jenn Gwapa</h3>
-                                <p>CEO / Founder</p>
-                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="img/team/02.jpg" alt="..." class="img-circle team-img">
-                            <div class="caption">
-                                <h3>Jenn Gwapa</h3>
-                                <p>CEO / Founder</p>
-                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="img/team/03.jpg" alt="..." class="img-circle team-img">
-                            <div class="caption">
-                                <h3>Jenn Gwapa</h3>
-                                <p>CEO / Founder</p>
-                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </div>
@@ -481,6 +379,7 @@
 
     <!-- Testimonials Section
     ==========================================-->
+    <!--
     <div id="tf-testimonials" class="text-center">
         <div class="overlay">
             <div class="container">
@@ -513,17 +412,17 @@
             </div>
         </div>
     </div>
-
+    -->
     <!-- Contact Section
     ==========================================-->
-    <div id="tf-contact" class="text-center">
+    <div id="contact" class="text-center">
         <div class="container">
 
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
 
                     <div class="section-title center">
-                        <h2>Feel free to <strong>contact us</strong></h2>
+                        <h2>Bizimle <strong>iletişime</strong> geçin</h2>
                         <div class="line">
                             <hr>
                         </div>
@@ -553,7 +452,8 @@
                         
                         <button type="submit" class="btn tf-btn btn-default">Submit</button>
                     </form>
-
+                    <div class="clearfix"></div>
+                    <br>  
                 </div>
             </div>
 
@@ -567,10 +467,12 @@
             </div>
             <div class="pull-right fnav">
                 <ul class="footer-social">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/sekom-yazilim?trk=job_view_topcard_company_name" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <!--
                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    -->
                 </ul>
             </div>
         </div>

@@ -3,8 +3,8 @@ border-color: #435c77
 bg-color: #5284bb
 */
 
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400&subset=latin,latin-ext,greek,greek-ext);
 
 body, html{
 	font-family: 'Lato', sans-serif;
@@ -169,7 +169,7 @@ a.fa.fa-angle-down:hover{
 	border: 2px solid #435c77;
 }
 /* About Section */
-#tf-about{
+#about{
 	padding: 80px 0;
 }
 ul.about-list{ margin: 30px 0 0 ;}
@@ -184,7 +184,7 @@ ul.about-list li span{
 }
 
 /* Team Section */
-#tf-team{
+#contact{
 	background: url(../img/bg-3.jpg);
 	background-size: cover;
 	background-position: center;
@@ -192,7 +192,7 @@ ul.about-list li span{
 	background-repeat: no-repeat;
 	color: #ffffff;
 }
-#tf-team .overlay{
+#contact .overlay{
 	background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.73) 17%, rgba(0,0,0,0.66) 35%, rgba(0,0,0,0.55) 62%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(17%,rgba(0,0,0,0.73)), color-stop(35%,rgba(0,0,0,0.66)), color-stop(62%,rgba(0,0,0,0.55)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
@@ -242,15 +242,15 @@ img.img-circle.team-img {
 	border: 4px solid transparent;
 	transition: all 0.5s;
 }
-#tf-team .item .thumbnail:hover>img.img-circle.team-img{
+#contact .item .thumbnail:hover>img.img-circle.team-img{
 	border: 4px solid #FCAC45;
 }
-#tf-team .thumbnail {
+#contact .thumbnail {
 	background: transparent;
 	border: 0;
 }
 
-#tf-team .thumbnail .caption {
+#contact .thumbnail .caption {
 	padding: 9px;
 	color: #F2F2F2;
 }
@@ -597,5 +597,38 @@ nav#footer p{
 
 .scrollTopContainer { min-height: 80px; }
 .marT15 { margin-top: 15px; }
+.marR10 { margin-right: 10px; }
+.menu li a:hover{ color: #fcac45 !important; }
+.open.DropDownOpen:before { 
+	position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    bottom: -3px;
+    right: 45px;
+    z-index: 10000;}
+
+.DropDownOpen .dropDownIcon:after{
+	content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    position: absolute;
+    top: 23px;
+    right: 2px;
+}
+
+@media (max-width: 1024px){
+	.open.DropDownOpen:before { display: none; content: "" }
+}    
+.open.DropDownOpen a { background: none !important }
+.dropBoxMenu { 
+
+}
 
 
