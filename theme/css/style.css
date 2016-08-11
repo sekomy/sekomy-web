@@ -169,7 +169,7 @@ a.fa.fa-angle-down:hover{
 	border: 2px solid #435c77;
 }
 /* About Section */
-#about{
+#about, #products{
 	padding: 80px 0;
 }
 ul.about-list{ margin: 30px 0 0 ;}
@@ -185,24 +185,7 @@ ul.about-list li span{
 
 /* Team Section */
 #contact{
-	background: url(../img/bg-3.jpg);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	color: #ffffff;
-}
-#contact .overlay{
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.73) 17%, rgba(0,0,0,0.66) 35%, rgba(0,0,0,0.55) 62%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(17%,rgba(0,0,0,0.73)), color-stop(35%,rgba(0,0,0,0.66)), color-stop(62%,rgba(0,0,0,0.55)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
-	height: auto;
-	background-attachment: fixed;
-	padding: 80px 0;
+
 }
 .section-title.center{
 	padding: 30px 0;
@@ -599,6 +582,7 @@ nav#footer p{
 .marT15 { margin-top: 15px; }
 .marR10 { margin-right: 10px; }
 .menu li a:hover{ color: #fcac45 !important; }
+.dropDownIcon{ cursor: pointer !important; }
 .open.DropDownOpen:before { 
 	position: absolute;
     content: "";
@@ -627,8 +611,9 @@ nav#footer p{
 	.open.DropDownOpen:before { display: none; content: "" }
 }    
 .open.DropDownOpen a { background: none !important }
-.dropBoxMenu { 
-
-}
+.pad0 { padding: 0 !important; }
+.marT20 { margin-top: 20px; }
+.padT20 { padding-top: 20px; }
+.dropdown-menu .active a { color: #568bc5 !important; font-weight: bold; }
 
 
