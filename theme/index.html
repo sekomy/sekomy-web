@@ -52,7 +52,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand logo" href="#tf-home"><img src="img/logo.png"></a>
+                <a class="navbar-brand logo" href="#home"><img src="img/logo.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse marT15 menu" id="menu">
@@ -77,7 +77,7 @@
     </nav>
     <!-- Home Page
     ==========================================-->
-    <div id="tf-home" class="text-center">
+    <div id="home" class="text-center">
         <div class="overlay">
             <div class="content">
                 <h1>MERHABA <strong><span class="color">SEKOM YAZILIMA</span></strong> HOŞGELDİNİZ</h1>
@@ -199,38 +199,6 @@
             </div>
         </div>
     </div>
-    <!-- Testimonials Section
-    ==========================================-->
-    <div id="tf-testimonials" class="text-center">
-        <div class="container">
-            <div class="section-title center">
-                <h2><strong>Our clients’</strong> testimonials</h2>
-                <div class="line">
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div id="testimonial" class="owl-carousel owl-theme">
-                        <div class="item">
-                            <h5>This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
-                            <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
-                        </div>
-
-                        <div class="item">
-                            <h5>This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
-                            <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
-                        </div>
-
-                        <div class="item">
-                            <h5>This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
-                            <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Contact Section
     ==========================================-->
     <div id="contact" class="text-center">
@@ -243,35 +211,16 @@
                             <hr>
                         </div>
                         <div class="clearfix"></div>
-                        <small><em>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</em></small>
+                        <p><small><em>Masaldan İş Merkezi, Kısıklı Mahallesi, Alemdağ Caddesi, No:60 C Blok D:8 Üsküdar/İSTANBUL</em></small></p>
+                        <p><a href="mailTo:info@sekomyazilim.com.tr"><small>info@sekomyazilim.com.tr</small></a></p>
                     </div>
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Message</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn tf-btn btn-default">Submit</button>
-                    </form>
                     <div class="clearfix"></div>
                     <br>
                 </div>
             </div>
         </div>
     </div>
+    <div id="map" class="map"></div>
     <nav id="footer">
         <div class="container">
             <div class="pull-left fnav">
@@ -300,6 +249,47 @@
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script>
+
+    var styles = [{
+        featureType: "water",
+        stylers: [{
+            visibility: "on"
+        }, {
+            color: "#ffffff"
+        }]
+    }];
+    var myLatlng = new google.maps.LatLng(41.022207, 29.073522);
+    var mapOptions = {
+      zoom: 14,
+      center: myLatlng
+    }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Sekom Yazılım</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Masaldan İş Merkezi, Kısıklı Mahallesi, Alemdağ Caddesi, No:60 C Blok D:8 Üsküdar/İSTANBUL</p>'+
+      '</div>'+
+      '</div>'
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        title:"SEKOM YAZILIM",
+        style: styles
+    });
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+
+    // To add the marker to the map, call setMap();
+    marker.setMap(map);
+
+</script>
 </body>
 
 </html>
