@@ -321,45 +321,48 @@
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg-NoHqbIfnFBOAdhFqnciWGebKwHyGjI">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg-NoHqbIfnFBOAdhFqnciWGebKwHyGjI&callback=initMap" async defer>
+</script>
     <script>
+    var initMap = function () {
+   
+        var styles = [{
+            featureType: "water",
+            stylers: [{
+                visibility: "on"
+            }, {
+                color: "#ffffff"
+            }]
+        }];
+        var myLatlng = new google.maps.LatLng(41.022207, 29.073522);
+        var mapOptions = {
+          zoom: 14,
+          center: myLatlng
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var contentString = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h3 id="firstHeading" class="firstHeading">Sekom Yazılım</h3>'+
+          '<div id="bodyContent">'+
+          '<p>Masaldan İş Merkezi, Kısıklı Mahallesi, Alemdağ Caddesi, No:60 C Blok D:8 Üsküdar/İSTANBUL</p>'+
+          '</div>'+
+          '</div>'
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            title:"SEKOM YAZILIM",
+            style: styles
+        });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
 
-    var styles = [{
-        featureType: "water",
-        stylers: [{
-            visibility: "on"
-        }, {
-            color: "#ffffff"
-        }]
-    }];
-    var myLatlng = new google.maps.LatLng(41.022207, 29.073522);
-    var mapOptions = {
-      zoom: 14,
-      center: myLatlng
-    }
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h3 id="firstHeading" class="firstHeading">Sekom Yazılım</h3>'+
-      '<div id="bodyContent">'+
-      '<p>Masaldan İş Merkezi, Kısıklı Mahallesi, Alemdağ Caddesi, No:60 C Blok D:8 Üsküdar/İSTANBUL</p>'+
-      '</div>'+
-      '</div>'
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        title:"SEKOM YAZILIM",
-        style: styles
-    });
-    marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
-
-    // To add the marker to the map, call setMap();
-    marker.setMap(map);
+        // To add the marker to the map, call setMap();
+        marker.setMap(map);
+    };     
 
 </script>
 </body>
