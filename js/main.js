@@ -119,8 +119,8 @@ function main() {
 }
 main();
 
-
 // canvas
+// https://codepen.io/pawelqcm/pen/oxPYox
 (function() {
 
     var canvas, ctx, circ, nodes, mouse, SENSITIVITY, SIBLINGS_LIMIT, DENSITY, NODES_QTY, ANCHOR_LENGTH, MOUSE_RADIUS;
